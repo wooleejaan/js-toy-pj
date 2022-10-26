@@ -11,6 +11,10 @@
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   color : #191919;
 }
@@ -34,7 +38,6 @@ body {
   justify-content: space-between;
   z-index: 3;
   mix-blend-mode: difference;
-  /* background-color: red; */
 }
 
 .menu-tog span {
@@ -136,8 +139,8 @@ h1 {
   overflow: hidden;
 }
 
-.menu-wrap {
-  display: block;
+.menu-wrap a {
+  /* display: block; */
   font-size: 40px;
   transform: translateY(100%);
   transition: 0.5s;
@@ -204,7 +207,7 @@ section {
 
 .proj-info-2 {
   position: absolute;
-  left: 34%;
+  right: 34%;
   bottom: 10%;
   text-align: right;
 }
@@ -219,7 +222,7 @@ section {
 
 .proj-info-3 {
   position: absolute;
-  left: 24%;
+  right: 24%;
   bottom: 10%;
   text-align: right;
 }
