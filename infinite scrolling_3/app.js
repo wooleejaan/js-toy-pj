@@ -1,7 +1,11 @@
-// 20:30~
+const scrollable = document.querySelector('.scrollable');
+const content = document.querySelector('.content');
+const imgSections = [...document.querySelectorAll('.img-section')];
+const images = [...document.querySelectorAll('.img')];
 
-/*
-https://www.youtube.com/watch?v=iNcvKWHwrBI
-https://fonts.google.com/specimen/Playfair+Display?query=playfair 
-https://random.responsiveimages.io/ 
-*/
+images.forEach((image, idx) => {
+  image.style.backgroundImage = `url(./images/${idx+1}.jpeg)`
+})
+
+const wraps = [...document.querySelectorAll('.wrap')];
+const menuTog = document.querySelector('.menu-tog');
