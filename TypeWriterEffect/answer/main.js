@@ -9,16 +9,14 @@
 // }
 
 // // Type Method
-// TypeWriter.prototype.type = function () {
-//   // console.log('Hello'); 웹사이트 열면 계속 찍힘
-  
+// TypeWriter.prototype.type = function() {
 //   // Current index of word
 //   const current = this.wordIndex % this.words.length;
 //   // Get full text of current word
 //   const fullTxt = this.words[current];
-  
-//   // Check if deleting 
-//   if (this.isDeleting) {
+
+//   // Check if deleting
+//   if(this.isDeleting) {
 //     // Remove char
 //     this.txt = fullTxt.substring(0, this.txt.length - 1);
 //   } else {
@@ -26,34 +24,35 @@
 //     this.txt = fullTxt.substring(0, this.txt.length + 1);
 //   }
 
-//   // Insert txt into element 
+//   // Insert txt into element
 //   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
 //   // Initial Type Speed
 //   let typeSpeed = 300;
 
-//   if (this.isDeleting) {
+//   if(this.isDeleting) {
 //     typeSpeed /= 2;
 //   }
 
 //   // If word is complete
-//   if (!this.isDeleting && this.txt === fullTxt) {
+//   if(!this.isDeleting && this.txt === fullTxt) {
 //     // Make pause at end
 //     typeSpeed = this.wait;
 //     // Set delete to true
 //     this.isDeleting = true;
-//   } else if (this.isDeleting && this.txt === '') {
-//     this.isDeleting == false;
+//   } else if(this.isDeleting && this.txt === '') {
+//     this.isDeleting = false;
 //     // Move to next word
 //     this.wordIndex++;
-//     // Pause before start typing 
+//     // Pause before start typing
 //     typeSpeed = 500;
 //   }
 
 //   setTimeout(() => this.type(), typeSpeed);
 // }
 
-// ES6 Class 
+
+// ES6 Class
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
@@ -66,15 +65,13 @@ class TypeWriter {
   }
 
   type() {
-    // console.log('Hello'); 웹사이트 열면 계속 찍힘
-  
     // Current index of word
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
     const fullTxt = this.words[current];
-    
-    // Check if deleting 
-    if (this.isDeleting) {
+
+    // Check if deleting
+    if(this.isDeleting) {
       // Remove char
       this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
@@ -82,27 +79,27 @@ class TypeWriter {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    // Insert txt into element 
+    // Insert txt into element
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
     // Initial Type Speed
     let typeSpeed = 300;
 
-    if (this.isDeleting) {
+    if(this.isDeleting) {
       typeSpeed /= 2;
     }
 
     // If word is complete
-    if (!this.isDeleting && this.txt === fullTxt) {
+    if(!this.isDeleting && this.txt === fullTxt) {
       // Make pause at end
       typeSpeed = this.wait;
       // Set delete to true
       this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
+    } else if(this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       // Move to next word
       this.wordIndex++;
-      // Pause before start typing 
+      // Pause before start typing
       typeSpeed = 500;
     }
 
@@ -110,7 +107,8 @@ class TypeWriter {
   }
 }
 
-// Init On DOM Loa1d 
+
+// Init On DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
 // Init App
