@@ -43,7 +43,7 @@
 //     // Set delete to true
 //     this.isDeleting = true;
 //   } else if (this.isDeleting && this.txt === '') {
-//     this.isDeleting == false;
+//     this.isDeleting = false;
 //     // Move to next word
 //     this.wordIndex++;
 //     // Pause before start typing 
