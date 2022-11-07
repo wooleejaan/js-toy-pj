@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>typewriter</title>
+</head>
+<body>
+  
+  <div class="text"></div>
+
+  <script>
+    let textDiv = document.querySelector('.text');
+    let text = 'This message is being typed on a typewriter.';
+    let i = 0;
+
+    function type () {
+      if (i < text.length) {
+        textDiv.innerHTML += text.charAt(i);
+        // let audio = new Audio('링크');
+        // audio.play();
+        i++;
+        setTimeout(type, Math.floor(Math.random() * 600) + 1);
+      } else if (i == text.length) {
+        i = 0;
+        textDiv.innerHTML = '';
+        setTimeout(type, Math.floor(Math.random() * 600) + 1);
+      }
+    }
+
+    type();
+
+  </script>
+</body>
+</html>
