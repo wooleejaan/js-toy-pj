@@ -18,3 +18,6 @@ https://youtu.be/Z6fQtNpB3hU
 
 ### 6
 https://youtube.com/c/LamaDev
+
+### 7 
+https://youtu.be/1EuNnZEp2sQ
