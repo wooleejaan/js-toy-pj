@@ -68,7 +68,7 @@ body {
 .copy-text button:after {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -22px;
   right: 25px;
   width: 10px;
   height: 10px;
@@ -77,6 +77,9 @@ body {
   display: none;
 }
 
+/* 
+active 붙기 전에는 display:none 해두었다가 
+active 붙으면 display:block으로 보여주기 */
 .copy-text.active button:before,
 .copy-text.active button:after {
   display: block;
