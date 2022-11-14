@@ -4,10 +4,12 @@ let aosElements = Array.from(document.querySelectorAll('.aos'));
 //   console.log(element.getBoundingClientRect());
 // })
 
+
 window.addEventListener('scroll', _.throttle(scanElements, 50));
 
 function scanElements(e) {
   console.count(e);
+  // console.log(window.innerHeight);
   aosElements.forEach(element => {
     if (isVisable(element)) {
       element.classList.add('active');
