@@ -5,6 +5,10 @@ let sliderGrabbed = false;
 
 slider.parentElement.addEventListener("scroll", (e) => {
   progressBar.style.width = `${getScrollPercentage()}%`;
+
+  console.log(slider.parentElement.scrollLeft);
+  console.log(slider.parentElement.scrollWidth);
+  console.log(slider.parentElement.clientWidth);
 });
 
 slider.addEventListener("mousedown", (e) => {
