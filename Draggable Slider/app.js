@@ -7,6 +7,7 @@ let x;
 
 slider.addEventListener("mousedown", (e) => {
   pressed = true;
+  console.log(e.offsetX);
   startx = e.offsetX - innerSlider.offsetLeft;
   slider.style.cursor = "grabbing";
 });
