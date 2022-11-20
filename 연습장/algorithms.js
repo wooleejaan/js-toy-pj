@@ -5,5 +5,4 @@ while (a<10) {
 console.log(a);
 
 let b = 2;
-
 let c = 3;
