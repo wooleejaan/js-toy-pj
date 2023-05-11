@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: -.08em;
+  color: rgb(90, 90, 90);
+}
+section {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  width: 95%;
+  /* border: 1px solid black; */
+}
+h1 {
+  position: absolute;
+  bottom: 1rem;
+  /* 
+  clamp(min, prefered, max) 
+  부모 요소를 기준으로 하는 상대 단위 사용함 
+
+  prefered 크기를 갖되, min 만큼 작아질 수도 있고 max만큼 커질 수도 있다. 
+  이 구간에서 웹 브라우저의 너비가 변하는 만큼 선형으로 글자 크기도 변하는 거임.
+  */
+  font-size: clamp(1px, 13vw, 100px);
+  opacity: 0;
+}
+span {
+  display: inline-block;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
